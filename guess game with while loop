@@ -1,0 +1,21 @@
+import random
+a = random.randint(0,10)
+chance = 3
+
+while range(0,10):
+    print(f"you have only {chance} chances left")
+    user=int(input("Guess the number"))
+    
+    if user==a:
+        print("congratulation you won")
+        break
+    elif user > a :
+        print("your number is bigger than the guesser no")
+    elif user < a :
+        print("your number is leser than the guesser number")
+    else:
+        print("try again")
+    chance -= 1
+    if chance == 0:
+        print("you lose")
+        break
